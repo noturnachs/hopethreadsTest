@@ -12,7 +12,6 @@ function Home() {
   const [showText2, setShowText2] = useState(false);
   const [showText3, setShowText3] = useState(false);
   const [showButton, setShowButton] = useState(false);
-  const [showMetrix, setShowMetrix] = useState(false);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false); // State to control fade effect
@@ -22,7 +21,6 @@ function Home() {
     const timer2 = setTimeout(() => setShowText2(true), 1000); // Show second text after 1000ms
     const timer3 = setTimeout(() => setShowText3(true), 1500); // Show third text after 1500ms
     const timer4 = setTimeout(() => setShowButton(true), 2000); // Show button after 2000ms
-    const timer5 = setTimeout(() => setShowMetrix(true), 2500); // Show button after 2000ms
 
     return () => {
       clearTimeout(timer1);
