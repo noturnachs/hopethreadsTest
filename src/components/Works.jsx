@@ -22,7 +22,7 @@ const Work = () => {
   }, []);
 
   useEffect(() => {
-    const duration = 2000; // Duration of the animation in milliseconds
+    const duration = 3000; // Duration of the animation in milliseconds
 
     // Animate the amount raised
     const amountStepTime = Math.abs(Math.floor(duration / targetAmount));
@@ -86,7 +86,7 @@ const Work = () => {
 
   return (
     <div
-      className={`grid grid-cols-2 gap-6 justify-items-center md:flex md:flex-row md:justify-center md:space-x-8 transition-transform duration-700 ease-in-out ${
+      className={`grid grid-cols-2 md:mt-20 gap-6 justify-items-center md:flex md:flex-row md:justify-center md:space-x-8 transition-transform duration-700 ease-in-out ${
         showMetrix ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
       }`}
     >
