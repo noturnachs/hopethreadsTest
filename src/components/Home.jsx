@@ -5,6 +5,7 @@ import mainImg2 from "../images/hurricane-season.png";
 import mainImg3 from "../images/wildfire001.png";
 import Work from "./Works";
 import { IoIosInformationCircleOutline } from "react-icons/io";
+import Loading from "./Loading"; // Import the Loading component
 
 function Home() {
   const [showText1, setShowText1] = useState(false);
@@ -13,6 +14,7 @@ function Home() {
   const [showButton, setShowButton] = useState(false);
   const [showImage, setShowImage] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [loading, setLoading] = useState(true); // Loading state
   const containerRef = useRef(null);
 
   const images = [mainImg, mainImg2, mainImg3];
@@ -25,6 +27,24 @@ function Home() {
     }
     return map;
   }, [activeIndex, images.length]);
+
+  useEffect(() => {
+    // Check if the user has visited before
+    const hasVisited = localStorage.getItem("hasVisited");
+
+    if (!hasVisited) {
+      // If not visited, show loading screen
+      const loadingTimer = setTimeout(() => {
+        setLoading(false); // Set loading to false after images are loaded
+        localStorage.setItem("hasVisited", "true"); // Set the flag in localStorage
+      }, 2000); // Adjust the time as needed
+
+      return () => clearTimeout(loadingTimer);
+    } else {
+      // If visited, skip loading
+      setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     const timer1 = setTimeout(() => setShowText1(true), 200);
@@ -46,6 +66,10 @@ function Home() {
       clearInterval(interval);
     };
   }, [images.length]);
+
+  if (loading) {
+    return <Loading />; // Show loading component while loading
+  }
 
   return (
     <div className="w-full h-full overflow-hidden p-5 justify-center text-center">
@@ -93,8 +117,6 @@ function Home() {
               Donate Now
             </button>
             <Link to="/programs">
-              {" "}
-              {/* Use Link for navigation */}
               <button className="relative py-2 px-6 w-full md:w-auto text-black text-base font-bold rounded-full overflow-hidden bg-blue-50 transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-xl before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#ff7e5f] before:to-[#feb47b] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
                 <span className="flex flex-row items-center justify-center">
                   <IoIosInformationCircleOutline size={20} /> &nbsp;Learn More
