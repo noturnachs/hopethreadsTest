@@ -1,11 +1,11 @@
 // Footer.js
 import React from "react";
 import { MdOutlineEmail } from "react-icons/md";
-import { FaPhoneAlt, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa"; // Import additional icons
+import { FaPhoneAlt, FaInstagram } from "react-icons/fa"; // Import additional icons
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-blue-100 text-gray-800 text-sm py-6">
+    <div className="bg-gradient-to-r from-blue-50 to-blue-100 text-gray-800 text-sm py-6 mt-20">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
           <div
