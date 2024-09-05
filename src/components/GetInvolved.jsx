@@ -26,6 +26,18 @@ const GetInvolved = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-10 p-4">
       <h2 className="text-4xl font-bold text-blue-600">Get Involved</h2>
+
+      {/* Volunteer Now Button */}
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSf38YS_2xe8NMysAQVK5wWjRL_-f-TfpDz3d7yPId6jONx0Ew/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105"
+      >
+        Volunteer Now
+      </a>
+
+      {/* Form Section */}
       <form className="w-full max-w-lg mt-6" onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
