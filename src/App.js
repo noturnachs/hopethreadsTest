@@ -5,6 +5,7 @@ import About from "./components/About"; // Import the About component
 import Programs from "./components/Programs"; // Import the Home component
 import Home from "./components/Home";
 import GetInvolved from "./components/GetInvolved"; // Import the GetInvolved component
+import Fundraisers from "./components/Fundraisers";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/programs" element={<Programs />} />
+          <Route path="/fundraisers" element={<Fundraisers />} />
           <Route path="/get-involved" element={<GetInvolved />} />
         </Routes>
       </Router>

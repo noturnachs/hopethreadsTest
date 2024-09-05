@@ -3,13 +3,16 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import fund from "../images/FUND RAISING.png";
 import clothes from "../images/clothes.png";
+import { motion } from "framer-motion";
+import { fadeIn } from "../components/anim";
+import teamIMG from "../images/thteam.png";
 
 const About = () => {
   return (
     <>
       {/* Main About Us Heading */}
-      <div className="h-40">
-        <div className="flex items-center justify-center mb-4">
+      <div className="h-36">
+        <div className="flex items-center justify-center mb-2">
           <h1 className="text-2xl font-extrabold">About Us</h1>
         </div>
         {/* Navigation Section */}
@@ -26,7 +29,13 @@ const About = () => {
       </div>
 
       {/* New Section for Our Organization */}
-      <div className="flex flex-col md:flex-row items-center justify-center mt-8 space-x-0 md:space-x-4 h-auto p-4">
+      <motion.div
+        variants={fadeIn("left", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.01 }}
+        className="flex flex-col md:flex-row items-center justify-center mt-8 space-x-0 md:space-x-4 h-auto p-4 overflow-hidden"
+      >
         <div className="w-full md:w-1/2 flex justify-center mb-4 md:mb-0">
           <img
             src="https://placehold.co/498x614/png"
@@ -63,7 +72,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row mt-5 space-y-5 md:space-y-0 p-2 md:p-0">
             <div className="flex flex-row space-x-2">
               <div className="bg-violet-400 p-2 rounded bg-opacity-40">
-                <img src={fund} className="h-full" alt="sdfg" />
+                <img src={fund} className="h-full w-max" alt="sdfg" />
               </div>
               <div className="w-1/2">
                 <h1 className="font-bold text-md">Fundraising Events</h1>
@@ -86,10 +95,16 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* New Section for Our Mission */}
-      <div className="flex flex-col items-center justify-center mt-20 p-6 bg-blue-500 bg-opacity-20">
+      <motion.div
+        variants={fadeIn("right", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.2 }}
+        className="flex flex-col items-center justify-center mt-20 p-6 bg-blue-500 bg-opacity-20 overflow-hidden"
+      >
         <h2 className="text-5xl font-bold flex items-center text-blue-600">
           Our Mission
         </h2>
@@ -104,11 +119,18 @@ const About = () => {
           us in our mission to provide clothing for disaster relief and be a
           beacon of hope in the darkest moments.
         </p>
-      </div>
+      </motion.div>
 
       {/* New Section for Introducing Members */}
-      <div className="flex flex-col items-center justify-center mt-20 bg-[#b3e1fb] bg-opacity-20 p-6">
+      <motion.div
+        variants={fadeIn("left", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.5 }}
+        className="flex flex-col items-center justify-center mt-20 bg-[#b3e1fb] bg-opacity-20 p-6 overflow-hidden"
+      >
         <h2 className="text-5xl font-bold text-blue-600">Meet Our Team</h2>
+        <img src={teamIMG} alt="s" className="rounded mt-5" />
         <div className="flex flex-wrap justify-center mt-6 space-x-4">
           {/* Member 1 */}
           <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 m-2">
@@ -128,7 +150,7 @@ const About = () => {
               className="rounded-full w-32 h-32 mb-2"
             />
             <h3 className="font-bold">Yoshita Virdi</h3>
-            <p className="text-sm text-gray-600">Program Director</p>
+            <p className="text-sm text-gray-600">Chief Financial Officer</p>
           </div>
           {/* Member 3 */}
           <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 m-2">
@@ -161,7 +183,7 @@ const About = () => {
             <p className="text-sm text-gray-600">Founder & CEO</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

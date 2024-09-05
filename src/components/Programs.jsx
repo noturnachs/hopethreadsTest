@@ -1,11 +1,21 @@
 import React from "react";
 import bgtop from "../images/bg-pr.png";
+import { motion } from "framer-motion";
+import { fadeIn } from "../components/anim";
+import img1 from "../images/img1.png";
+import img2 from "../images/img2.png";
+import img3 from "../images/img3.png";
+import img4 from "../images/img4.png";
 
 function Programs() {
   return (
     <div className="max-w-screen-xl mx-auto p-4">
       {/* Background Image Section */}
-      <div
+      <motion.div
+        variants={fadeIn("up", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.01 }}
         className="relative h-64 bg-cover bg-center mb-4 rounded"
         style={{
           backgroundImage: `url("${bgtop}")`,
@@ -14,10 +24,16 @@ function Programs() {
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold bg-black bg-opacity-50 rounded">
           Our Programs
         </h1>
-      </div>
+      </motion.div>
 
       {/* Clothing Donation Boxes Section */}
-      <div className="flex flex-col md:flex-row mt-8 bg-[#8bd3f9] bg-opacity-50">
+      <motion.div
+        variants={fadeIn("left", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.01 }}
+        className="flex flex-col md:flex-row mt-8 bg-[#8bd3f9] bg-opacity-50"
+      >
         <div className="md:w-1/2 mb-4 md:mb-0 p-5 flex flex-col items-center justify-center ">
           <h2 className="text-3xl font-extrabold mb-5">
             Clothing Donation Boxes
@@ -42,15 +58,21 @@ function Programs() {
         </div>
         <div className="md:w-1/2">
           <img
-            src="https://placehold.co/490x600/png"
+            src={img1}
             alt="Clothing Donation"
-            className="w-full h-auto rounded"
+            className="w-full h-auto rounded-tr-lg rounded-br-lg"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Clothing Sorting Section */}
-      <div className="flex flex-col md:flex-row mt-8 bg-[#8bd3f9] bg-opacity-50">
+      <motion.div
+        variants={fadeIn("right", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.01 }}
+        className="flex flex-col md:flex-row mt-8 bg-[#8bd3f9] bg-opacity-50"
+      >
         <div className="md:w-1/2 mb-4 md:mb-0 p-5 flex flex-col items-center justify-center ">
           <h2 className="text-3xl font-extrabold mb-5">Clothing Sorting</h2>
           <p>
@@ -67,15 +89,21 @@ function Programs() {
         </div>
         <div className="md:w-1/2">
           <img
-            src="https://placehold.co/490x600/png"
+            src={img2}
             alt="Clothing Sorting"
-            className="w-full h-auto rounded"
+            className="w-full h-auto rounded-tr-lg rounded-br-lg"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Community Engagement Sessions Section */}
-      <div className="flex flex-col md:flex-row mt-8 bg-[#8bd3f9] bg-opacity-50">
+      <motion.div
+        variants={fadeIn("left", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.01 }}
+        className="flex flex-col md:flex-row mt-8 bg-[#8bd3f9] bg-opacity-50"
+      >
         <div className="md:w-1/2 mb-4 md:mb-0 p-5 flex flex-col items-center justify-center ">
           <h2 className="text-3xl font-extrabold mb-5">
             Community Engagement Sessions
@@ -96,15 +124,21 @@ function Programs() {
         </div>
         <div className="md:w-1/2">
           <img
-            src="https://placehold.co/490x600/png"
+            src={img3}
             alt="Community Engagement"
-            className="w-full h-auto rounded"
+            className="w-full h-auto rounded-tr-lg rounded-br-lg"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Social Media Advocates Section */}
-      <div className="flex flex-col md:flex-row mt-8 bg-[#8bd3f9] bg-opacity-50">
+      <motion.div
+        variants={fadeIn("right", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.01 }}
+        className="flex flex-col md:flex-row mt-8 bg-[#8bd3f9] bg-opacity-50"
+      >
         <div className="md:w-1/2 mb-4 md:mb-0 p-5 flex flex-col items-center justify-center ">
           <h2 className="text-3xl font-extrabold mb-5">
             Social Media Advocates
@@ -121,12 +155,12 @@ function Programs() {
         </div>
         <div className="md:w-1/2">
           <img
-            src="https://placehold.co/490x600/png"
+            src={img4}
             alt="Social Media Advocacy"
-            className="w-full h-auto rounded"
+            className="w-full h-auto rounded-tr-lg rounded-br-lg"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
