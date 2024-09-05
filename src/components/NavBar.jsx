@@ -37,7 +37,7 @@ function Navbar() {
       <nav className="border-gray-200 bg-transparent">
         <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
-            <a href="https://flowbite.com/">
+            <a href="/">
               <img
                 src="https://placehold.co/17x12/png"
                 className="h-8"
