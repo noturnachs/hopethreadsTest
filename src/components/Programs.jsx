@@ -6,6 +6,7 @@ import img1 from "../images/img1.png";
 import img2 from "../images/img2.png";
 import img3 from "../images/img3.png";
 import img4 from "../images/img4.png";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function Programs() {
   return (
@@ -52,15 +53,17 @@ function Programs() {
             clothing items donated is equivalent to one volunteer hour. Donate
             your clothes today and track your volunteer hours below!
           </p>
-          <button className="rounded-full p-2 border-green-500 border-2 hover:bg-green-400">
-            Donate your Clothes now
-          </button>
+          <Link to="/get-involved">
+            <button className="rounded-full p-2 border-green-500 border-2 hover:bg-green-400 transition-transform transform hover:scale-105 ">
+              Join Now
+            </button>
+          </Link>
         </div>
         <div className="md:w-1/2">
           <img
             src={img1}
             alt="Clothing Donation"
-            className="w-full h-auto rounded-tr-lg rounded-br-lg"
+            className="w-full h-auto rounded-lg"
           />
         </div>
       </motion.div>
@@ -83,15 +86,17 @@ function Programs() {
             help us sort through the clothes which will then be donated to those
             affected by disasters.
           </p>
-          <button className="rounded-full p-2 border-green-500 border-2 hover:bg-green-400">
-            Help Sort Clothes
-          </button>
+          <Link to="/get-involved">
+            <button className="rounded-full p-2 border-green-500 border-2 hover:bg-green-400 transition-transform transform hover:scale-105 ">
+              Join Now
+            </button>
+          </Link>
         </div>
         <div className="md:w-1/2">
           <img
             src={img2}
             alt="Clothing Sorting"
-            className="w-full h-auto rounded-tr-lg rounded-br-lg"
+            className="w-full h-auto rounded-lg"
           />
         </div>
       </motion.div>
@@ -118,15 +123,17 @@ function Programs() {
             positive teamwork. Join us in learning how to provide hope and
             happiness to victims during difficult times!
           </p>
-          <button className="rounded-full p-2 border-green-500 border-2 hover:bg-green-400">
-            Join a Session
-          </button>
+          <Link to="/get-involved">
+            <button className="rounded-full p-2 border-green-500 border-2 hover:bg-green-400 transition-transform transform hover:scale-105 ">
+              Join Now
+            </button>
+          </Link>
         </div>
         <div className="md:w-1/2">
           <img
             src={img3}
             alt="Community Engagement"
-            className="w-full h-auto rounded-tr-lg rounded-br-lg"
+            className="w-full h-auto rounded-lg"
           />
         </div>
       </motion.div>
@@ -149,15 +156,17 @@ function Programs() {
             more people during disasters. Join us in spreading hope and
             awareness through social media!
           </p>
-          <button className="rounded-full p-2 border-green-500 border-2 hover:bg-green-400">
-            Become an Advocate
-          </button>
+          <Link to="/get-involved">
+            <button className="rounded-full p-2 border-green-500 border-2 hover:bg-green-400 transition-transform transform hover:scale-105 ">
+              Join Now
+            </button>
+          </Link>
         </div>
         <div className="md:w-1/2">
           <img
             src={img4}
             alt="Social Media Advocacy"
-            className="w-full h-auto rounded-tr-lg rounded-br-lg"
+            className="w-full h-auto rounded-lg"
           />
         </div>
       </motion.div>

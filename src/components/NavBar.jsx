@@ -126,6 +126,20 @@ function Navbar() {
               </li>
               <li>
                 <NavLink
+                  to="/donate"
+                  className={({ isActive }) =>
+                    `block py-2 px-3 rounded  ${
+                      isActive ? "text-black" : "text-white"
+                    } md:hover:bg-transparent md:border-0 md:p-0`
+                  }
+                >
+                  <span className="bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-600">
+                    Donate
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="/get-involved"
                   className={({ isActive }) =>
                     `block py-2 px-3 rounded  ${
@@ -200,6 +214,21 @@ function Navbar() {
                 }
               >
                 Fundraisers
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/donate"
+                onClick={closeMenu} // Close menu on click
+                className={({ isActive }) =>
+                  `block py-2 px-3 rounded mt-2 ${
+                    isActive ? "text-blue-500" : "text-white"
+                  } hover:bg-transparent md:border-0 md:p-0`
+                }
+              >
+                <span className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 ">
+                  Donate
+                </span>
               </NavLink>
             </li>
             <li>

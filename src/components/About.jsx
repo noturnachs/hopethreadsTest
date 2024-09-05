@@ -103,7 +103,7 @@ const About = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.2 }}
-        className="flex flex-col items-center justify-center mt-20 p-6 bg-blue-500 bg-opacity-20 overflow-hidden"
+        className="flex flex-col items-center justify-center mt-20 p-6 "
       >
         <h2 className="text-5xl font-bold flex items-center text-blue-600">
           Our Mission
@@ -127,7 +127,7 @@ const About = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.5 }}
-        className="flex flex-col items-center justify-center mt-20 bg-[#b3e1fb] bg-opacity-20 p-6 overflow-hidden"
+        className="flex flex-col items-center justify-center mt-5 bg-[#b3e1fb] bg-opacity-20 p-6 overflow-hidden"
       >
         <h2 className="text-5xl font-bold text-blue-600">Meet Our Team</h2>
         <img src={teamIMG} alt="s" className="rounded mt-5" />
