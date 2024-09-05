@@ -10,12 +10,16 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false); // Close the menu
+  };
+
   return (
     <>
       {/* Top Bar */}
       <div className="bg-transparent text-black text-sm py-2 sm:block hidden">
-        <div className="max-w-screen-xl mx-auto justify-start items-start  px-4">
-          <div className="flex items-start  flex-row space-x-10 text-left">
+        <div className="max-w-screen-xl mx-auto justify-start items-start px-4">
+          <div className="flex items-start flex-row space-x-10 text-left">
             <div className="flex items-center space-x-2">
               <MdOutlineEmail size={20} />
               <span>hopethreadsco@gmail.com</span>
@@ -75,7 +79,6 @@ function Navbar() {
                 <NavLink
                   to="/"
                   className={({ isActive }) => {
-                    console.log(`Home isActive: ${isActive}`); // Debugging log
                     return `block py-2 px-3 rounded  ${
                       isActive ? "text-black " : "md:bg-transparent text-white"
                     } hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0`;
@@ -147,6 +150,7 @@ function Navbar() {
             <li>
               <NavLink
                 to="/"
+                onClick={closeMenu} // Close menu on click
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded  ${
                     isActive ? "text-blue-500 bg-blue-400" : "text-white"
@@ -160,6 +164,7 @@ function Navbar() {
             <li>
               <NavLink
                 to="/about"
+                onClick={closeMenu} // Close menu on click
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded  ${
                     isActive ? "text-blue-500 bg-blue-400" : "text-white"
@@ -172,6 +177,7 @@ function Navbar() {
             <li>
               <NavLink
                 to="/programs"
+                onClick={closeMenu} // Close menu on click
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded  ${
                     isActive ? "text-blue-500 bg-blue-400" : "text-white"
@@ -184,6 +190,7 @@ function Navbar() {
             <li>
               <NavLink
                 to="/fundraisers"
+                onClick={closeMenu} // Close menu on click
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded  ${
                     isActive ? "text-blue-500 bg-blue-400" : "text-white"
@@ -196,6 +203,7 @@ function Navbar() {
             <li>
               <NavLink
                 to="/get-involved"
+                onClick={closeMenu} // Close menu on click
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded  ${
                     isActive ? "text-blue-500" : "text-white"
