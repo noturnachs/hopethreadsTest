@@ -14,7 +14,7 @@ const Work = () => {
   const [showMetrix, setShowMetrix] = useState(false);
 
   useEffect(() => {
-    const timer5 = setTimeout(() => setShowMetrix(true), 2500); // Show button after 2000ms
+    const timer5 = setTimeout(() => setShowMetrix(true), 1000); // Show button after 2000ms
 
     return () => {
       clearTimeout(timer5);

@@ -27,11 +27,11 @@ function Home() {
   }, [activeIndex, images.length]);
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setShowText1(true), 500);
-    const timer2 = setTimeout(() => setShowText2(true), 1000);
-    const timer3 = setTimeout(() => setShowText3(true), 1500);
-    const timer4 = setTimeout(() => setShowButton(true), 2000);
-    const timer5 = setTimeout(() => setShowImage(true), 2500);
+    const timer1 = setTimeout(() => setShowText1(true), 200);
+    const timer2 = setTimeout(() => setShowText2(true), 400);
+    const timer3 = setTimeout(() => setShowText3(true), 600);
+    const timer4 = setTimeout(() => setShowButton(true), 800);
+    const timer5 = setTimeout(() => setShowImage(true), 1000);
 
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -67,7 +67,7 @@ function Home() {
                 : "-translate-x-10 opacity-0"
             }`}
           >
-            Help Bring Hope to Disaster-Affected Communities
+            Help Bring Hope to Disaster - Affected Communities
           </h2>
           <p
             className={`text-md md:text-md font-semibold transition-transform duration-700 ease-in-out w-full md:w-[80%] ${

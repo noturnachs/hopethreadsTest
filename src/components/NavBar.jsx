@@ -143,7 +143,9 @@ function Navbar() {
         </div>
         {/* Dropdown Menu for Mobile */}
         <div
-          className={`w-full md:hidden ${isOpen ? "block" : "hidden"}`} // Show/hide based on isOpen
+          className={`w-full md:hidden bg-[#8cc5e6] overflow-hidden transition-max-height duration-300 ease-in-out ${
+            isOpen ? "max-h-screen" : "max-h-0"
+          }`} // Smooth transition effect
           id="navbar-default"
         >
           <ul className="font-medium flex flex-col p-4 rounded-lg dark:border-gray-700">
@@ -153,7 +155,7 @@ function Navbar() {
                 onClick={closeMenu} // Close menu on click
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded  ${
-                    isActive ? "text-blue-500 bg-blue-400" : "text-white"
+                    isActive ? "text-blue-500 bg-blue-400" : "text-blue-700"
                   } hover:bg-blue-400  md:hover:bg-transparent md:border-0 md:p-0`
                 }
                 aria-current="page"
@@ -167,7 +169,7 @@ function Navbar() {
                 onClick={closeMenu} // Close menu on click
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded  ${
-                    isActive ? "text-blue-500 bg-blue-400" : "text-white"
+                    isActive ? "text-blue-500 bg-blue-400" : "text-blue-700"
                   } hover:bg-blue-400 md:hover:bg-transparent md:border-0 md:p-0`
                 }
               >
@@ -180,7 +182,7 @@ function Navbar() {
                 onClick={closeMenu} // Close menu on click
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded  ${
-                    isActive ? "text-blue-500 bg-blue-400" : "text-white"
+                    isActive ? "text-blue-500 bg-blue-400" : "text-blue-700"
                   }  hover:bg-blue-400 md:hover:bg-transparent md:border-0 md:p-0`
                 }
               >
@@ -193,7 +195,7 @@ function Navbar() {
                 onClick={closeMenu} // Close menu on click
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded  ${
-                    isActive ? "text-blue-500 bg-blue-400" : "text-white"
+                    isActive ? "text-blue-500 bg-blue-400" : "text-blue-700"
                   } hover:bg-blue-400 md:hover:bg-transparent md:border-0 md:p-0`
                 }
               >
