@@ -3,6 +3,7 @@ import { IoMdHome } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/anim";
+import Fevent from "./FEvents"; // Import Fevent from FEvents.jsx
 
 const Fundraisers = () => {
   return (
@@ -29,7 +30,13 @@ const Fundraisers = () => {
         </h3>
       </div>
 
+      {/* Future Events Section */}
+      <Fevent />
+
       {/* Blend Coffee Bar Section */}
+      <div className="border-t border-black mt-10" />
+
+      <h2 className="text-3xl font-extrabold mb-5 mt-5">Past Events</h2>
       <motion.div
         variants={fadeIn("left", 0.1)}
         initial="hidden"

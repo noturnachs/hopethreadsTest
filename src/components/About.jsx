@@ -1,11 +1,11 @@
 import { IoMdHome } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
-import { FaHandHoldingHeart } from "react-icons/fa6";
-import fund from "../images/FUND RAISING.png";
-import clothes from "../images/clothes.png";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/anim";
 import teamIMG from "../images/thteam.png";
+import Mission from "./Mission"; // Adjust the path as necessary
+import { AboutSection } from "./AboutTop"; // Adjust the path as necessary
 
 const About = () => {
   return (
@@ -29,7 +29,7 @@ const About = () => {
       </div>
 
       {/* New Section for Our Organization */}
-      <motion.div
+      {/* <motion.div
         variants={fadeIn("left", 0.1)}
         initial="hidden"
         whileInView={"show"}
@@ -95,31 +95,10 @@ const About = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
+      <AboutSection />
 
-      {/* New Section for Our Mission */}
-      <motion.div
-        variants={fadeIn("right", 0.1)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.2 }}
-        className="flex flex-col items-center justify-center mt-20 p-6 "
-      >
-        <h2 className="text-5xl font-bold flex items-center text-blue-600">
-          Our Mission
-        </h2>
-        <p className="mt-4 text-md text-justify md:w-1/2 w-full">
-          At <span className="font-bold">hopethreads</span>, we're dedicated to
-          bringing warmth and hope to disaster-affected and conflict-stricken
-          communities worldwide. Through community engagement sessions,
-          fundraising, and compassionate volunteers, we deliver essential
-          materials and funding to those in conflict zones and individuals
-          impacted by natural disasters. Our mission is to provide comfort and
-          resilience during times of crisis, ensuring no one feels alone. Join
-          us in our mission to provide clothing for disaster relief and be a
-          beacon of hope in the darkest moments.
-        </p>
-      </motion.div>
+      <Mission />
 
       {/* New Section for Introducing Members */}
       <motion.div

@@ -6,6 +6,7 @@ import mainImg3 from "../images/wildfire001.png";
 import Work from "./Works";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import Loading from "./Loading"; // Import the Loading component
+import Impact from "./Impact"; // Import the Impact component
 
 function Home() {
   const [showText1, setShowText1] = useState(false);
@@ -13,6 +14,7 @@ function Home() {
   const [showText3, setShowText3] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const [showImage, setShowImage] = useState(false);
+  const [showImpact, setShowImpact] = useState(false); // State to control Impact visibility
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(true); // Loading state
   const containerRef = useRef(null);
@@ -52,6 +54,7 @@ function Home() {
     const timer3 = setTimeout(() => setShowText3(true), 600);
     const timer4 = setTimeout(() => setShowButton(true), 800);
     const timer5 = setTimeout(() => setShowImage(true), 1000);
+    const timer6 = setTimeout(() => setShowImpact(true), 1500); // Show Impact after a delay
 
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -63,6 +66,7 @@ function Home() {
       clearTimeout(timer3);
       clearTimeout(timer4);
       clearTimeout(timer5);
+      clearTimeout(timer6);
       clearInterval(interval);
     };
   }, [images.length]);
@@ -156,6 +160,7 @@ function Home() {
         </div>
       </div>
       <Work />
+      <Impact impact={showImpact} /> {/* Pass showImpact to Impact component */}
     </div>
   );
 }
