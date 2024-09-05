@@ -16,24 +16,6 @@ function Navbar() {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-transparent text-black text-sm py-2 sm:block hidden">
-        <div className="max-w-screen-xl mx-auto justify-start items-start px-4">
-          <div className="flex items-start flex-row space-x-10 text-left">
-            <div className="flex items-center space-x-2">
-              <MdOutlineEmail size={20} />
-              <span>hopethreadsco@gmail.com</span>
-            </div>
-
-            <div className="flex items-center space-x-2">
-              <FaPhoneAlt size={15} />
-              <span>240-721-0434</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="border-t border-black" />
-
       <nav className="border-gray-200 bg-transparent">
         <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
