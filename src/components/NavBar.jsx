@@ -80,7 +80,9 @@ function Navbar() {
                   to="/"
                   className={({ isActive }) => {
                     return `block py-2 px-3 rounded  ${
-                      isActive ? "text-black " : "md:bg-transparent text-white"
+                      isActive
+                        ? "text-black "
+                        : "md:bg-transparent text-blue-500"
                     } hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0`;
                   }}
                   aria-current="page"
@@ -93,7 +95,7 @@ function Navbar() {
                   to="/about"
                   className={({ isActive }) =>
                     `block py-2 px-3 rounded  ${
-                      isActive ? "text-black" : "text-white"
+                      isActive ? "text-black" : "text-blue-500"
                     }   md:hover:bg-transparent md:border-0 md:p-0`
                   }
                 >
@@ -105,7 +107,7 @@ function Navbar() {
                   to="/programs"
                   className={({ isActive }) =>
                     `block py-2 px-3 rounded   ${
-                      isActive ? "text-black" : "text-white"
+                      isActive ? "text-black" : "text-blue-500"
                     }  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0`
                   }
                 >
@@ -117,7 +119,7 @@ function Navbar() {
                   to="/fundraisers"
                   className={({ isActive }) =>
                     `block py-2 px-3 rounded  ${
-                      isActive ? "text-black" : "text-white"
+                      isActive ? "text-black" : "text-blue-500"
                     }  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0`
                   }
                 >
@@ -129,11 +131,11 @@ function Navbar() {
                   to="/donate"
                   className={({ isActive }) =>
                     `block py-2 px-3 rounded  ${
-                      isActive ? "text-black" : "text-white"
+                      isActive ? "text-black" : "text-blue-500"
                     } md:hover:bg-transparent md:border-0 md:p-0`
                   }
                 >
-                  <span className="bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-600">
+                  <span className="bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600">
                     Donate
                   </span>
                 </NavLink>
@@ -143,11 +145,11 @@ function Navbar() {
                   to="/get-involved"
                   className={({ isActive }) =>
                     `block py-2 px-3 rounded  ${
-                      isActive ? "text-black" : "text-white"
+                      isActive ? "text-black" : "text-blue-500"
                     } md:hover:bg-transparent md:border-0 md:p-0`
                   }
                 >
-                  <span className="bg-black text-white font-bold py-2 px-4 rounded-full hover:bg-blue-600">
+                  <span className="bg-blue-700 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-600">
                     Get Involved
                   </span>
                 </NavLink>
