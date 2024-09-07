@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Volunteers",
+    "value": 500,
+    "max": 1000
+  },
+  {
+    "label": "Funds Raised",
+    "value": 7500,
+    "max": 10000
+  },
+  {
+    "label": "Social Media Impressions",
+    "value": 20,
+    "max": 40
+  },
+  {
+    "label": "Community Engagement",
+    "value": 300,
+    "max": 500
+  },
+  {
+    "label": "Publications",
+    "value": 2,
+    "max": 5
+  }
+]
