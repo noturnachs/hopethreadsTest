@@ -1,4 +1,3 @@
-// Footer.js
 import React from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaPhoneAlt, FaInstagram } from "react-icons/fa"; // Import additional icons
