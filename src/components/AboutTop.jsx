@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/anim";
-import { FaHandHoldingHeart } from "react-icons/fa6";
-import fund from "../images/FUND RAISING.png";
-import clothes from "../images/clothes.png";
+import { FaHandHoldingHeart, FaMoneyBillWave, FaTshirt } from "react-icons/fa"; // Import relevant icons
 
 const AboutSection = () => {
   return (
@@ -44,9 +42,10 @@ const AboutSection = () => {
         </p>
         <div className="border-t border-gray-500 w-full md:w-[80%] mt-5" />
         <div className="flex flex-col md:flex-row mt-5 space-y-5 md:space-y-0 p-2 md:p-0">
-          <div className="flex flex-row space-x-2">
+          <div className="flex flex-row items-center space-x-2">
             <div className="bg-violet-400 p-2 rounded bg-opacity-40 transition-transform transform hover:scale-105">
-              <img src={fund} className="h-full w-max" alt="Fundraising" />
+              <FaMoneyBillWave className="h-8 w-8 text-blue-600" />{" "}
+              {/* Fundraising icon */}
             </div>
             <div className="w-1/2">
               <h1 className="font-bold text-md">Fundraising Events</h1>
@@ -55,9 +54,10 @@ const AboutSection = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row space-x-2">
+          <div className="flex flex-row items-center space-x-2">
             <div className="bg-violet-400 p-2 rounded bg-opacity-40 transition-transform transform hover:scale-105">
-              <img src={clothes} className="h-full" alt="Clothing Drives" />
+              <FaTshirt className="h-8 w-8 text-blue-600" />{" "}
+              {/* Clothing drives icon */}
             </div>
             <div className="w-1/2">
               <h1 className="font-bold text-md">Clothing Drives</h1>
@@ -72,5 +72,5 @@ const AboutSection = () => {
   );
 };
 
-// i want to export this but not as deafult
+// Export the AboutSection
 export { AboutSection };

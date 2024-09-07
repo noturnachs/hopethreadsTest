@@ -119,9 +119,11 @@ function Home() {
                 : "-translate-x-10 opacity-0"
             }`}
           >
-            <button className="relative py-2 px-6 w-full md:w-max text-white text-base font-bold rounded-full overflow-hidden bg-blue-500 transition-all duration-700 ease-in-out hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
-              Donate Now
-            </button>
+            <Link to="/donate">
+              <button className="relative py-2 px-6 w-full md:w-max text-white text-base font-bold rounded-full overflow-hidden bg-blue-500 transition-all duration-700 ease-in-out hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
+                Donate Now
+              </button>
+            </Link>
             <Link to="/programs">
               <button className="relative py-2 px-6 w-full md:w-auto text-black text-base font-bold rounded-full overflow-hidden bg-blue-50 transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-xl before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#ff7e5f] before:to-[#feb47b] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
                 <span className="flex flex-row items-center justify-center">

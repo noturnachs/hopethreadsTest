@@ -2,8 +2,7 @@ import React from "react";
 import bgtop from "../images/bg-pr.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/anim";
-import img1 from "../images/img1.png";
-import img2 from "../images/img2.png";
+
 import img3 from "../images/img3.png";
 import img4 from "../images/img4.png";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom"; // Import NavLink
-import { MdOutlineEmail } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
+
 import logo from "../images/7035595522.png";
 
 function Navbar() {
@@ -23,7 +22,7 @@ function Navbar() {
             <a href="/">
               <img
                 src={logo}
-                className="h-[70px] w-full rounded-lg"
+                className="h-16 w-auto rounded-lg" // Set a fixed height and auto width
                 alt="Flowbite Logo"
               />
             </a>

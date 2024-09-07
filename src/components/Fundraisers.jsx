@@ -7,6 +7,8 @@ import Fevent from "./FEvents"; // Import Fevent from FEvents.jsx
 import blend from "../images/blend.jpeg";
 import sterling from "../images/sterling.jpeg";
 import { FaInstagram } from "react-icons/fa";
+import sud from "../images/sudan.jpeg";
+import sud2 from "../images/ourorg3.jpeg";
 
 const Fundraisers = () => {
   return (
@@ -90,6 +92,52 @@ const Fundraisers = () => {
           <img
             src={sterling}
             alt="SterlingFest Fundraiser"
+            className="w-full h-auto rounded"
+          />
+        </div>
+      </motion.div>
+
+      {/* sudan */}
+      <motion.div
+        variants={fadeIn("right", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.01 }}
+        className="flex flex-col md:flex-row mt-8 bg-[#8bd3f9] bg-opacity-50 rounded-lg"
+      >
+        <div className="md:w-1/2 mb-4 md:mb-0 p-5 flex flex-col items-center justify-center">
+          <h2 className="text-2xl font-extrabold mb-5">
+            Sudan Humanitarian Relief Fundraiser
+          </h2>
+          <p>additional text here</p>
+        </div>
+        <div className="md:w-1/2">
+          <img
+            src={sud}
+            alt="sudan fundraiser"
+            className="w-full h-auto rounded"
+          />
+        </div>
+      </motion.div>
+
+      {/* sudan 2 */}
+      <motion.div
+        variants={fadeIn("right", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.01 }}
+        className="flex flex-col md:flex-row mt-8 bg-[#8bd3f9] bg-opacity-50 rounded-lg"
+      >
+        <div className="md:w-1/2 mb-4 md:mb-0 p-5 flex flex-col items-center justify-center">
+          <h2 className="text-3xl font-extrabold mb-5">
+            Trivia Night for Sudan
+          </h2>
+          <p>additional text here</p>
+        </div>
+        <div className="md:w-1/2">
+          <img
+            src={sud2}
+            alt="sudan trivia night"
             className="w-full h-auto rounded"
           />
         </div>

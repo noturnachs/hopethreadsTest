@@ -6,6 +6,8 @@ import { fadeIn } from "../components/anim";
 import teamIMG from "../images/thteam.png";
 import Mission from "./Mission"; // Adjust the path as necessary
 import { AboutSection } from "./AboutTop"; // Adjust the path as necessary
+import yoshita from "../images/yoshita.jpeg";
+import piya from "../images/piya.jpeg";
 
 const About = () => {
   return (
@@ -37,7 +39,7 @@ const About = () => {
         variants={fadeIn("left", 0.1)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: false, amount: 0 }}
         className="flex flex-col items-center justify-center mt-5 bg-[#b3e1fb] bg-opacity-20 p-6 overflow-hidden"
       >
         <h2 className="text-5xl font-bold text-blue-600">Meet Our Team</h2>
@@ -58,9 +60,10 @@ const About = () => {
           {/* Member 2 */}
           <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 m-2">
             <img
-              src="https://placehold.co/150x150/png" // Replace with actual member image
+              src={yoshita} // Replace with actual member image
               alt="Member 2"
-              className="rounded-full w-32 h-32 mb-2"
+              className="rounded-full w-32 h-32 mb-2 object-cover" // Added object-cover
+              style={{ maxWidth: "100%", maxHeight: "100%" }} // Ensures the image does not exceed its container
             />
             <h3 className="font-bold">Yoshita Virdi</h3>
             <p className="text-xs text-gray-600">Chief Financial Officer</p>
@@ -68,9 +71,10 @@ const About = () => {
           {/* Member 3 */}
           <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 m-2">
             <img
-              src="https://placehold.co/150x150/png" // Replace with actual member image
+              src={piya} // Replace with actual member image
               alt="Member 3"
-              className="rounded-full w-32 h-32 mb-2"
+              className="rounded-full w-32 h-32 mb-2 object-cover" // Added object-cover
+              style={{ maxWidth: "100%", maxHeight: "100%" }} // Ensures the image does not exceed its container
             />
             <h3 className="font-bold">Piya Kumar</h3>
             <p className="text-xs text-gray-600">
