@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom"; // Import NavLink
 import { MdOutlineEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
+import logo from "../images/7035595522.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,14 +22,14 @@ function Navbar() {
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
             <a href="/">
               <img
-                src="https://placehold.co/17x12/png"
-                className="h-8"
+                src={logo}
+                className="h-[70px] w-full rounded-lg"
                 alt="Flowbite Logo"
               />
             </a>
-            <span className="self-center text-2xl font-extrabold whitespace-nowrap text-black ">
+            {/* <span className="self-center text-2xl font-extrabold whitespace-nowrap text-black ">
               Hopethreads
-            </span>
+            </span> */}
           </div>
           <button
             onClick={toggleMenu}

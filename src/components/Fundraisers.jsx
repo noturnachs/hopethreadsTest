@@ -4,6 +4,9 @@ import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../components/anim";
 import Fevent from "./FEvents"; // Import Fevent from FEvents.jsx
+import blend from "../images/blend.jpeg";
+import sterling from "../images/sterling.jpeg";
+import { FaInstagram } from "react-icons/fa";
 
 const Fundraisers = () => {
   return (
@@ -36,7 +39,9 @@ const Fundraisers = () => {
       {/* Blend Coffee Bar Section */}
       <div className="border-t border-black mt-10" />
 
-      <h2 className="text-3xl font-extrabold mb-5 mt-5">Past Events</h2>
+      <h2 className="text-3xl font-extrabold mb-5 mt-5">
+        Fundraiser Highlights
+      </h2>
       <motion.div
         variants={fadeIn("left", 0.1)}
         initial="hidden"
@@ -57,9 +62,9 @@ const Fundraisers = () => {
         </div>
         <div className="md:w-1/2">
           <img
-            src="https://placehold.co/600x400/png"
+            src={blend}
             alt="Blend Coffee Bar Fundraiser"
-            className="w-full h-auto rounded-tr-lg rounded-br-lg"
+            className="w-full h-auto rounded"
           />
         </div>
       </motion.div>
@@ -83,12 +88,26 @@ const Fundraisers = () => {
         </div>
         <div className="md:w-1/2">
           <img
-            src="https://placehold.co/600x400/png"
+            src={sterling}
             alt="SterlingFest Fundraiser"
-            className="w-full h-auto rounded-tr-lg rounded-br-lg"
+            className="w-full h-auto rounded"
           />
         </div>
       </motion.div>
+
+      {/* View More Fundraisers Section */}
+      <div className="flex flex-col items-center mt-10">
+        <h2 className="text-md font-bold">More Fundraisers</h2>
+        <a
+          href="https://www.instagram.com/hopethreads.co"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center text-blue-500 mt-2 text-2xl font-semibold"
+        >
+          <FaInstagram size={24} className="mr-2 text-pink-500" />{" "}
+          @hopethreads.co
+        </a>
+      </div>
     </div>
   );
 };

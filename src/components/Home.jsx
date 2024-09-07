@@ -7,6 +7,8 @@ import Work from "./Works";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import Loading from "./Loading"; // Import the Loading component
 import Impact from "./Impact"; // Import the Impact component
+import { FaRegNewspaper } from "react-icons/fa";
+import Partners from "./Partners"; // Import the Partners component
 
 function Home() {
   const [showText1, setShowText1] = useState(false);
@@ -86,7 +88,7 @@ function Home() {
                 : "-translate-x-10 opacity-0"
             }`}
           >
-            we are here to...
+            We are here to...
           </p>
           <h2
             className={`font-extrabold text-3xl md:text-5xl max-w-md transition-transform duration-700 ease-in-out ${
@@ -127,6 +129,17 @@ function Home() {
                 </span>
               </button>
             </Link>
+            <a
+              href="https://hopethreads-newsletter.beehiiv.com/subscribe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="relative py-2 px-6 w-full md:w-auto text-black text-base font-bold rounded-full overflow-hidden bg-blue-50 transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-xl before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#ff7e5f] before:to-[#feb47b] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
+                <span className="flex flex-row items-center justify-center">
+                  <FaRegNewspaper size={20} /> &nbsp;Our Newsletter
+                </span>
+              </button>
+            </a>
           </div>
         </div>
         <div
@@ -161,6 +174,7 @@ function Home() {
       </div>
       <Work />
       <Impact impact={showImpact} /> {/* Pass showImpact to Impact component */}
+      <Partners /> {/* Include the Partners component */}
     </div>
   );
 }

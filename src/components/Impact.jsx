@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaUsers,
   FaDollarSign,
@@ -6,43 +6,36 @@ import {
   FaPeopleArrows,
   FaNewspaper,
 } from "react-icons/fa";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 
 const Impact = ({ impact }) => {
-  const metrics = [
-    { label: "Volunteers", value: 40, max: 100, icon: <FaUsers size={24} /> },
-    {
-      label: "Funds Raised",
-      value: 7500,
-      max: 10000,
-      icon: <FaDollarSign size={24} />,
-    },
-    {
-      label: "Instagram Reach",
-      value: 3000,
-      max: 5000,
-      icon: <FaInstagram size={24} />,
-    },
-    {
-      label: "Community Engagement",
-      value: 300,
-      max: 500,
-      icon: <FaPeopleArrows size={24} />,
-    },
-    {
-      label: "Publications",
-      value: 2,
-      max: 5,
-      icon: <FaNewspaper size={24} />,
-    },
-  ];
+  const [metrics, setMetrics] = useState([]);
+
+  useEffect(() => {
+    const fetchMetrics = async () => {
+      try {
+        const response = await fetch("http://localhost:4444/metrics");
+        const data = await response.json();
+
+        // Check if data is available and valid
+        if (data && Array.isArray(data)) {
+          setMetrics(data);
+        } else {
+          console.error("Invalid metrics data:", data);
+        }
+      } catch (error) {
+        console.error("Error fetching metrics:", error);
+      }
+    };
+
+    fetchMetrics();
+  }, []);
 
   return (
     <div
       className={`mt-10 p-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-lg transition-transform duration-700 ease-in-out ${
         impact ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-      }
-`}
+      }`}
     >
       <h3 className="text-3xl font-extrabold text-center text-blue-700 mb-6">
         Our Impact
