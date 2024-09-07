@@ -9,7 +9,7 @@ const Fevent = () => {
   // Fetch events from the server on component mount
   useEffect(() => {
     axios
-      .get("http://localhost:4444/events") // Ensure your Express server is running
+      .get(`${process.env.REACT_APP_BACKEND_URL}/events`) // Use the environment variable
       .then((response) => {
         setEvents(response.data); // Set events data
       })
@@ -45,5 +45,4 @@ const Fevent = () => {
     </div>
   );
 };
-
 export default Fevent;
