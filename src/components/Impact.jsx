@@ -1,11 +1,4 @@
 import React, { useEffect, useState } from "react";
-import {
-  FaUsers,
-  FaDollarSign,
-  FaInstagram,
-  FaPeopleArrows,
-  FaNewspaper,
-} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Impact = ({ impact }) => {
@@ -14,7 +7,9 @@ const Impact = ({ impact }) => {
   useEffect(() => {
     const fetchMetrics = async () => {
       try {
-        const response = await fetch("http://localhost:4444/metrics");
+        const response = await fetch(
+          `${process.env.REACT_APP_BACKEND_URL}/metrics`
+        );
         const data = await response.json();
 
         // Check if data is available and valid
