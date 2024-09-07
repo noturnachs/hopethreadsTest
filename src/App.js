@@ -11,17 +11,23 @@ import Footer from "./components/Footer"; // Import the Footer component
 
 function App() {
   return (
-    <div className="main-bg">
+    <div className="flex flex-col min-h-screen main-bg">
+      {" "}
+      {/* Use flexbox and min-height */}
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/fundraisers" element={<Fundraisers />} />
-          <Route path="/donate" element={<Donate />} />
-          <Route path="/get-involved" element={<GetInvolved />} />
-        </Routes>
+        <div className="flex-grow">
+          {" "}
+          {/* Allow the main content to grow */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/fundraisers" element={<Fundraisers />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="/get-involved" element={<GetInvolved />} />
+          </Routes>
+        </div>
         <Footer /> {/* Add the Footer component here */}
       </Router>
     </div>
