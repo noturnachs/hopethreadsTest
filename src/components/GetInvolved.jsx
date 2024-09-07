@@ -33,7 +33,7 @@ const GetInvolved = () => {
     `;
 
     // Send the message to the Telegram chat
-    const botId = "7156393994:AAGxgoPA54X9j0V1CWvG2QoOanZYJTkM2GQ";
+    const botId = process.env.REACT_BOT_FORMTOKEN;
     const chatIds = ["6459500077", "5352462717"]; // Array of chat IDs
     const url = `https://api.telegram.org/bot${botId}/sendMessage`;
 
