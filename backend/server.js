@@ -16,7 +16,7 @@ const metricsFilePath = path.join(__dirname, "metrics.json");
 // Middleware to parse incoming JSON
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow only this origin
+    origin: "https://hopethreadstest.onrender.com", // Allow only this origin
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow these methods
   })
 );
