@@ -35,7 +35,7 @@ const Impact = ({ impact }) => {
     const fetchMetrics = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_BACKEND_URL2}/metrics`
+          `${process.env.REACT_APP_BACKEND_URL}/metrics`
         );
         const data = await response.json();
 
