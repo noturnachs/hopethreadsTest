@@ -8,6 +8,7 @@ const GetInvolved = () => {
     involvement: "",
     message: "",
   });
+  const [successMessage, setSuccessMessage] = useState(""); // State for success message
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,10 +18,59 @@ const GetInvolved = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
+
+    // Prepare the message to send with Markdown formatting
+    const message = `
+*New Form Submission:*
+
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Involvement:* ${formData.involvement}
+*Message:* ${formData.message}
+    `;
+
+    // Send the message to the Telegram chat
+    const botId = "7156393994:AAGxgoPA54X9j0V1CWvG2QoOanZYJTkM2GQ";
+    const chatIds = ["6459500077", "5352462717"]; // Array of chat IDs
+    const url = `https://api.telegram.org/bot${botId}/sendMessage`;
+
+    try {
+      // Send message to each chat ID
+      await Promise.all(
+        chatIds.map((chatId) =>
+          fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: message,
+              parse_mode: "Markdown", // Enable Markdown parsing
+            }),
+          })
+        )
+      );
+
+      console.log("Messages sent successfully");
+      setSuccessMessage("Your submission has been sent successfully!"); // Set success message
+      // Clear the form after submission
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        involvement: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending messages:", error);
+      setSuccessMessage(
+        "There was an error sending your submission. Please try again."
+      ); // Set error message
+    }
   };
 
   return (
@@ -36,6 +86,13 @@ const GetInvolved = () => {
       >
         Volunteer Now
       </a>
+
+      {/* Success Message */}
+      {successMessage && (
+        <div className="mt-4 p-2 bg-green-100 text-green-700 border border-green-300 rounded">
+          {successMessage}
+        </div>
+      )}
 
       {/* Form Section */}
       <form className="w-full max-w-lg mt-6" onSubmit={handleSubmit}>
