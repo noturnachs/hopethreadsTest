@@ -163,7 +163,7 @@ function Home() {
                 key={i}
                 src={image}
                 alt={`Slide ${i}`}
-                className="absolute rounded-lg shadow-lg transition-transform duration-500 ease-in-out"
+                className="absolute rounded-lg shadow-lg transition-transform duration-500 ease-in-out h-[130%]"
                 style={{
                   transform: `scale(${scale}) translateX(${translateX}px)`,
                   zIndex: zIndex,
