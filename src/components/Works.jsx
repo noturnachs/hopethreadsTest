@@ -90,19 +90,19 @@ const Work = () => {
         showMetrix ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
       }`}
     >
-      <div className="flex flex-col items-center justify-center w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-full shadow-lg">
+      <div className="flex flex-col items-center justify-center w-24 h-24 md:w-32 md:h-32 bg-blue-100 rounded-full shadow-lg">
         <h2 className="text-sm font-bold">Raised</h2>
         <p className="text-2xl md:text-3xl font-extrabold text-blue-500">${amountCount}</p>
       </div>
-      <div className="flex flex-col items-center justify-center w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-full shadow-lg">
+      <div className="flex flex-col items-center justify-center w-24 h-24 md:w-32 md:h-32 bg-blue-100 rounded-full shadow-lg">
         <h2 className="text-sm font-bold">Helped</h2>
         <p className="text-2xl md:text-3xl font-extrabold text-blue-500">{peopleCount}+</p>
       </div>
-      <div className="flex flex-col items-center justify-center w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-full shadow-lg">
+      <div className="flex flex-col items-center justify-center w-24 h-24 md:w-32 md:h-32 bg-blue-100 rounded-full shadow-lg">
         <h2 className="text-sm font-bold">Chapters</h2>
         <p className="text-2xl  md:text-3xl font-extrabold text-blue-500">{chapterCount}</p>
       </div>
-      <div className="flex flex-col items-center justify-center w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-full shadow-lg">
+      <div className="flex flex-col items-center justify-center w-24 h-24 md:w-32 md:h-32 bg-blue-100 rounded-full shadow-lg">
         <h2 className="text-sm font-bold">Volunteers</h2>
         <p className="text-2xl md:text-3xl font-extrabold text-blue-500">{volCount}</p>
       </div>
