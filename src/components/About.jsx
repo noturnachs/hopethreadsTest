@@ -8,6 +8,11 @@ import Mission from "./Mission"; // Adjust the path as necessary
 import { AboutSection } from "./AboutTop"; // Adjust the path as necessary
 import yoshita from "../images/yoshita.jpeg";
 import piya from "../images/piya.jpeg";
+import katya from "../images/katya.jpeg"
+import norah from "../images/norah.jpeg"
+import nidhi from "../images/nidhi.jpeg"
+import { Link } from "react-router-dom";
+
 
 const About = () => {
   return (
@@ -19,10 +24,12 @@ const About = () => {
         </div>
         {/* Navigation Section */}
         <div className="flex items-center justify-center space-x-1">
-          <div className="flex items-center">
+        <Link to="/" >
+          <div className="flex items-center hover:underline">
             <IoMdHome size={15} />
             <h2 className="text-sm ml-1">Home</h2>
           </div>
+          </Link>
           <span className="flex items-center">
             <FaArrowRight size={15} />
           </span>
@@ -48,9 +55,9 @@ const About = () => {
           {/* Member 1 */}
           <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 m-2">
             <img
-              src="https://placehold.co/150x150/png" // Replace with actual member image
+              src={nidhi} // Replace with actual member image
               alt="Member 1"
-              className="rounded-full w-32 h-32 mb-2"
+              className="rounded-full w-32 h-32 object-cover mb-2"
             />
             <h3 className="font-bold">Nidhi Thammineni</h3>
             <p className="text-xs text-gray-600">
@@ -78,13 +85,13 @@ const About = () => {
             />
             <h3 className="font-bold">Piya Kumar</h3>
             <p className="text-xs text-gray-600">
-              Chief Officer of Program Management{" "}
+              Fundraising Coordinator{" "}
             </p>
           </div>
           {/* Member 4 */}
           <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 m-2">
             <img
-              src="https://placehold.co/150x150/png" // Replace with actual member image
+              src={katya} // Replace with actual member image
               alt="Member 1"
               className="rounded-full w-32 h-32 mb-2"
             />
@@ -94,9 +101,9 @@ const About = () => {
           {/* Member 5 */}
           <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 m-2">
             <img
-              src="https://placehold.co/150x150/png" // Replace with actual member image
+              src={norah} // Replace with actual member image
               alt="Member 1"
-              className="rounded-full w-32 h-32 mb-2"
+              className="rounded-full w-32 object-cover h-32 mb-2"
             />
             <h3 className="font-bold">Norah Thomas</h3>
             <p className="text-xs text-gray-600">Chief Officer of Marketing</p>
