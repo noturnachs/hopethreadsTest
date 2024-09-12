@@ -9,6 +9,8 @@ import sterling from "../images/sterling.jpeg";
 import { FaInstagram } from "react-icons/fa";
 import sud from "../images/sudan.jpeg";
 import sud2 from "../images/ourorg3.jpeg";
+import { Link } from "react-router-dom";
+
 
 const Fundraisers = () => {
   return (
@@ -20,10 +22,12 @@ const Fundraisers = () => {
         </div>
         {/* Navigation Section */}
         <div className="flex items-center justify-center space-x-1">
-          <div className="flex items-center">
+        <Link to="/" >
+          <div className="flex items-center hover:underline">
             <IoMdHome size={15} />
             <h2 className="text-sm ml-1">Home</h2>
           </div>
+          </Link>
           <span className="flex items-center">
             <FaArrowRight size={15} />
           </span>
